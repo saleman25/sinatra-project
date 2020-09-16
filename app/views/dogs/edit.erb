@@ -1,6 +1,6 @@
 <h2>🐾 Edit Your Lil Friend 🐾</h2> 
 
-<form method="POST" action='/dogs/<%=@dogs.id%>/edit'>
+<form method="POST" action='/dogs/<%=@dogs.id%>'>
 <input id='hidden' type ='hidden' name='_method' value='patch' />
 <input type="text" name="breed" placeholder="Breed:">
   <input type="text" name="color" placeholder="Color:" >
@@ -9,5 +9,9 @@
   <option name="yes">Yes</option>
   <option name="no">No</option>
   </select>
-<input type="submit" value='woof!' />
+<input type="submit" value='🐾 Woof 🐾' />
 </form>
+<br>
+<form action="/dogs" method="get">
+<button>🐾 Cancel 🐾</button> 
+ </form>

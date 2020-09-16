@@ -20,9 +20,9 @@ end
     post '/dogs' do 
         @dogs = current_user.dogs.build(breed: params[:breed], color: params[:color])
         if params[:cute] == "yes"
-            @dogs.cute = "true"
+            @dogs.cute = true
         else 
-            @dogs.cute = "false"
+            @dogs.cute = false
         end 
         if @dogs.save 
             redirect to "/dogs/#{@dogs.id}"

@@ -5,9 +5,10 @@
 <h2> Dogs You've Seen! </h2>
 
 <% @dogs.each do |dogs| %>
-   <h1> A <%= dogs.color  %> <%= dogs.breed  %> ! </h1>
+   <h1> <a href="/dogs/<%=dogs.id%>"> A <%= dogs.color  %> <%= dogs.breed  %> !</a> </h1>
    <% end %> 
-    
+   
+  
 <br>
 <br>
 <form action="dogs/new" method="get">
