@@ -1,0 +1,9 @@
+#edit one instance of dog
+
+<h2> Edit </h2> 
+
+<form method="POST" action='/dogs/<%=@dogs.id%>/edit'>
+<input id='hidden' type ='hidden' name='_method' value='patch' />
+<input type="text" id=  value='<%=@dogs.content%>' />
+<input type="submit" value='woof!' />
+</form>
