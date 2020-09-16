@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20200914213144) do
   create_table "dogs", force: :cascade do |t|
     t.string  "breed"
     t.string  "color"
+    t.integer "user_id"
     t.boolean "cute"
   end
 

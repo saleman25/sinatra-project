@@ -1,8 +1,19 @@
-#show all the dogs uve seen
-
-<h1> Welcome, <%= current_user.username %>
+<a href="https://lh3.googleusercontent.com/wHQAtSMoSc5gDBa4x3XZihqPhVxGJPEGVRothjkTIBgjuKDbkUCuyQGZZeTbtC-gRyHn62_DRWSUW5DMPOUzroZ873xmIfw_WI4JvTl8vhYMhG4bDXq_Ei1PLtaLNGJP2pvDn26D5A=w2400?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/wHQAtSMoSc5gDBa4x3XZihqPhVxGJPEGVRothjkTIBgjuKDbkUCuyQGZZeTbtC-gRyHn62_DRWSUW5DMPOUzroZ873xmIfw_WI4JvTl8vhYMhG4bDXq_Ei1PLtaLNGJP2pvDn26D5A=w600-h315-p-k" /> </a>
+<br>
+<h1> 🐾 Welcome, <%= current_user.username %>! 🐾
+<br>
 <h2> Dogs You've Seen! </h2>
 
 <% @dogs.each do |dogs| %>
+   <h1> A <%= dogs.color  %> <%= dogs.breed  %> ! </h1>
+   <% end %> 
     
-    <% end %> 
+<br>
+<br>
+<form action="dogs/new" method="get">
+<button>🐾 Add a New Dog 🐾</button> 
+ </form>
+<br>
+ <form action="/logout" method="get">
+<button>🐾 Log Out 🐾</button> 
+ </form>

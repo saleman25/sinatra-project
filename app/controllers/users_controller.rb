@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
     get '/signup' do
         if !logged_in?
-            erb :'users/sign_up' #locals: {message: "Please sign up before you sign in"}
+            erb :'users/signup'  
         else 
             redirect to '/dogs'
         end 
@@ -20,7 +20,7 @@ class UsersController < ApplicationController
 end 
 
     get '/login' do 
-        if !logged_in 
+        if !logged_in? 
             erb :'users/login'
         else 
             redirect to '/dogs'
@@ -31,7 +31,9 @@ end
         user = User.find_by(:username => params[:username])
         
         if user && user.authenticate(params[:password])
+         
             session[:user_id] = user.id
+           
             redirect to '/dogs'
         else
             redirect to '/signup'
@@ -39,7 +41,7 @@ end
     end
 
     get '/logout' do
-        if logged_in 
+        if logged_in? 
             session.destroy
             redirect to 'login'
         else

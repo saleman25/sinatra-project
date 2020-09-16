@@ -1,4 +1,4 @@
-class Users < ActiveRecord::Base 
+class User < ActiveRecord::Base 
     has_many :dogs
     has_secure_password
 end 

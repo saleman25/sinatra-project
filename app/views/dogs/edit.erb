@@ -1,9 +1,13 @@
-#edit one instance of dog
-
-<h2> Edit </h2> 
+<h2>🐾 Edit Your Lil Friend 🐾</h2> 
 
 <form method="POST" action='/dogs/<%=@dogs.id%>/edit'>
 <input id='hidden' type ='hidden' name='_method' value='patch' />
-<input type="text" id=  value='<%=@dogs.content%>' />
+<input type="text" name="breed" placeholder="Breed:">
+  <input type="text" name="color" placeholder="Color:" >
+  <label>Were they cute?</label>
+  <select>
+  <option name="yes">Yes</option>
+  <option name="no">No</option>
+  </select>
 <input type="submit" value='woof!' />
 </form>

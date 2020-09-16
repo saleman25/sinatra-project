@@ -1,1 +1,23 @@
-#shows only one selected post
+<a href="https://lh3.googleusercontent.com/wHQAtSMoSc5gDBa4x3XZihqPhVxGJPEGVRothjkTIBgjuKDbkUCuyQGZZeTbtC-gRyHn62_DRWSUW5DMPOUzroZ873xmIfw_WI4JvTl8vhYMhG4bDXq_Ei1PLtaLNGJP2pvDn26D5A=w2400?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/wHQAtSMoSc5gDBa4x3XZihqPhVxGJPEGVRothjkTIBgjuKDbkUCuyQGZZeTbtC-gRyHn62_DRWSUW5DMPOUzroZ873xmIfw_WI4JvTl8vhYMhG4bDXq_Ei1PLtaLNGJP2pvDn26D5A=w600-h315-p-k" /> </a>
+<br>
+<br>
+<h1>I saw a <%= @dogs.breed  %> today!!</h1>
+<h2>They were <%= @dogs.color  %>!!!</h2>
+<% if @dogs.cute == true %> 
+<h2> And they were very cute! </h2> 
+<% else %>
+<h2> They could've been cuter : / </h2>
+<% end %>
+
+
+<form method="post" action="/dogs/<%=@dogs.id%>/delete">
+  <input id="hidden" type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="🐾 Delete Dog 🐾">
+</form>
+
+<br>
+
+<form action="/dogs/<%=@dogs.id%>/edit" method="get">
+<button>🐾 Edit Dog 🐾</button> 
+ </form>
+
