@@ -1,6 +1,16 @@
 <head>
 <style>
 
+
+p {
+    margin-bottom: 18px;
+    text-align: center;
+    color: mediumseagreen;
+    font-weight: bold;
+    font-style: italic;
+}
+
+
 input[type=password] {
     width: 100%;
     padding: 12px 20px;
@@ -27,6 +37,9 @@ input[type=password] {
 
 
 <h1>Sign Up!</h1>
+
+<p><%= @error %></p>
+
 <form action='/signup' method="POST">
 <input type='text' name="email" placeholder="Email:">
 <input type="text" name="username" placeholder="Username:">
