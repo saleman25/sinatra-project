@@ -1,17 +1,42 @@
+<head>
+<style>
+
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: lavender;
+    color: black;
+    text-align: center;
+  }
+
+
+  input[type="submit"] {
+    background-color: #ffcce6;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid hotpink;
+    border-radius: 8px;
+  }
+
+</head>
+</style>
+
+
+
+
 <h1>Sign Up!</h1>
 <form action='/signup' method="POST">
 <input type='text' name="email" placeholder="Email:">
 <input type="text" name="username" placeholder="Username:">
-<input type="text" name="password" placeholder="Password:">
+<input type="password" name="password" placeholder="Password:">
 <input type="submit" value="🐾 Sign Up 🐾">
 </form> 
 
 
 
-<form action="/login" method="get">
-<button>🐾 Login 🐾</button> 
- </form>
-
+<br>
  <form action="/" method="get">
 <button>🐾 Cancel 🐾</button> 
  </form>

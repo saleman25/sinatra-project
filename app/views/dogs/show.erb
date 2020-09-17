@@ -1,4 +1,19 @@
+<head>
+<style>
 
+  input[type="submit"] {
+    background-color: #ffcce6;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid hotpink;
+    border-radius: 8px;
+  }
+
+  
+
+}
+
+</head>
+</style>
 
 
 <a href="https://lh3.googleusercontent.com/wHQAtSMoSc5gDBa4x3XZihqPhVxGJPEGVRothjkTIBgjuKDbkUCuyQGZZeTbtC-gRyHn62_DRWSUW5DMPOUzroZ873xmIfw_WI4JvTl8vhYMhG4bDXq_Ei1PLtaLNGJP2pvDn26D5A=w2400?source=screenshot.guru"><p style="text-align:center;"><img src="https://lh3.googleusercontent.com/wHQAtSMoSc5gDBa4x3XZihqPhVxGJPEGVRothjkTIBgjuKDbkUCuyQGZZeTbtC-gRyHn62_DRWSUW5DMPOUzroZ873xmIfw_WI4JvTl8vhYMhG4bDXq_Ei1PLtaLNGJP2pvDn26D5A=w600-h315-p-k" /> </a>
@@ -12,17 +27,20 @@
 <h2> They could've been cuter : / </h2>
 <% end %>
 
-
+<br>
 <form method="post" action="/dogs/<%=@dogs.id%>/delete">
   <input id="hidden" type="hidden" name="_method" value="DELETE">
   <input type="submit" value="🐾 Delete Dog 🐾">
 </form>
 
+
+
+
 <br>
 
 <form action="/dogs/<%=@dogs.id%>/edit" method="get">
 <button>🐾 Edit Dog 🐾</button> 
- </form>
+ </form> 
 
 <br>
 

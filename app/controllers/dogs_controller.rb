@@ -2,7 +2,7 @@ class DogsController < ApplicationController
 
     get '/dogs' do 
         if logged_in? 
-            @dogs = Dog.all 
+            @dogs = current_user.dogs 
             erb :'dogs/dogs'
         else 
             redirect to '/login'
