@@ -25,8 +25,11 @@ input[type=password] {
 
 
 <h1>Login to Start Talking About Dogs!</h1>
+
+<%= @error %>
+
 <form action='/login' method="POST">
-<input type="text" name="username" placeholder="Username:">
+<input type="text" name="username" value="<%= params[:username]%>" placeholder="Username:">
 <input type="password" name="password" placeholder="Password:">
 <input type="submit" value="🐾 Woof 🐾">
 </form>

@@ -37,7 +37,8 @@ end
            
             redirect to '/dogs'
         else
-            redirect to '/signup'
+            @error= "Invalid login, please try again."
+            erb :'users/login'
         end
     end
 
