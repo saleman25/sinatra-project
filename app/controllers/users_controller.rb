@@ -9,11 +9,11 @@ class UsersController < ApplicationController
     end 
     
     post '/signup' do
-    if params[:username] == "" || params[:email] == "" || params[:password] == ""
+    if params[:username] == "" || params[:email] == "" || params[:password] == "" || params[:name] == ""
         @error = "*Data invalid. Please fill out the form accordingly.*"
         erb :'users/signup'
     else 
-        @user = User.new(:username => params[:username], :email => params[:email], :password => params[:password])
+        @user = User.new(:username => params[:username], :email => params[:email], :password => params[:password], :name => params[:name])
         @user.save 
         session[:user_id] = @user.id 
         redirect to '/dogs'
