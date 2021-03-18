@@ -2,6 +2,36 @@
   <style>
     #link { color: hotpink; text-decoration: none; } 
     #link:hover { color: lightpink;}
+
+    [id='toggle-heart'] {
+      position: absolute;
+      left: -100vw;
+    }
+    [for='toggle-heart'] {
+  color: #aab8c2;
+}
+
+[id='toggle-heart']:checked + label {
+  color: #FF69B4;
+}
+[for='toggle-heart'] {
+  align-self: center;
+  color: #aab8c2;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+@keyframes heart { 0%, 17.5% { font-size: 0; } }
+
+[id='toggle-heart']:checked + label {
+  will-change: font-size;
+  animation: heart 1s cubic-bezier(.17, .89, .32, 1.49);
+}
+  
+
+  .doggies {
+  border: 2px solid gray;
+    }
   </style>
 </head>
 
@@ -11,11 +41,20 @@
 <br>
 <h2> Dogs You've Seen! </h2>
 
+
+
 <% @dogs.each do |dogs| %>
+  <div class="doggies">
    <h3> <a id="link" href="/dogs/<%=dogs.id%>"> A <%= dogs.color  %> <%= dogs.breed  %> !<br> </a> </h3>
+   <input id="toggle-heart" type="checkbox" />
+    <label for="toggle-heart">❤</label>
+   </div>
+   <br>
    <% end %> 
    
-  
+
+   
+
 <br>
 <br>
 
