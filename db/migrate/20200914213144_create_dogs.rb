@@ -5,6 +5,7 @@ class CreateDogs < ActiveRecord::Migration
       t.string :color
       t.integer :user_id
       t.boolean :cute
+      t.boolean :heart
   end
 end
 end
