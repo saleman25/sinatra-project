@@ -11,3 +11,5 @@ class FeedController < ApplicationController
         redirect to '/login'
     end
 end 
+
+end
