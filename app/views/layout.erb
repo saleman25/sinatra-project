@@ -12,16 +12,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="/stylesheets/main.css" />
+    <style>
+    .topnav {
+  background-color: #006666;
+  overflow: hidden;
+  
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  border-style: solid;
+  border-color: #008080;
+  border-width: thin;
+  text-decoration: none;
+  font-size: 16px;
+  
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color:  #b3ffff;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color:  #00b3b3;
+  color: white;
+}
+    </style>
   </head>
   <body>
   
     <div class="wrapper">
+    
     <div class="topnav">
     <a class="active" href="/dogs">Home</a>
     <a href="/feed">Dashboard</a>
     <a href="/dogs/new">Add</a>
     <a href="/logout">Logout</a>
-  </div>
+    </div>
+
         <%= yield %>
 
       <footer class="branding">
